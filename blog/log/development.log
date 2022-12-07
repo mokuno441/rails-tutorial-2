@@ -1,2 +1,10 @@
   [1m[35m (29.7ms)[0m  [1m[35mCREATE DATABASE "blog_development" ENCODING = 'unicode'[0m
   [1m[35m (28.1ms)[0m  [1m[35mCREATE DATABASE "blog_test" ENCODING = 'unicode'[0m
+Started GET "/" for 172.19.0.1 at 2022-12-07 14:46:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.0ms | Allocations: 584)
+Completed 200 OK in 117ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 4638)
+
+
