@@ -88,3 +88,40 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 1565ms (Views: 1540.8ms | ActiveRecord: 2.4ms | Allocations: 99802)
 
 
+Started GET "/" for 172.19.0.1 at 2022-12-08 14:54:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2440)
+  Rendered layout layouts/application.html.erb (Duration: 101.0ms | Allocations: 16313)
+Completed 200 OK in 113ms (Views: 103.0ms | ActiveRecord: 1.6ms | Allocations: 17889)
+
+
+Started GET "/" for 172.19.0.1 at 2022-12-08 14:56:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 870)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 3673)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.8ms | Allocations: 4493)
+
+
+Started GET "/articles/1" for 172.19.0.1 at 2022-12-08 14:56:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 2670)
+Completed 200 OK in 43ms (Views: 23.6ms | ActiveRecord: 0.6ms | Allocations: 9288)
+
+
