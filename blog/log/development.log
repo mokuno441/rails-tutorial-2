@@ -125,3 +125,29 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 43ms (Views: 23.6ms | ActiveRecord: 0.6ms | Allocations: 9288)
 
 
+Started GET "/" for 172.19.0.1 at 2022-12-14 12:39:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5376)
+  Rendered layout layouts/application.html.erb (Duration: 403.3ms | Allocations: 40013)
+Completed 200 OK in 449ms (Views: 411.9ms | ActiveRecord: 4.6ms | Allocations: 43680)
+
+
+Started GET "/articles/1" for 172.19.0.1 at 2022-12-14 12:39:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 2705)
+Completed 200 OK in 33ms (Views: 21.1ms | ActiveRecord: 0.6ms | Allocations: 5510)
+
+
